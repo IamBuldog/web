@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Apple Command Reference</title>
+
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-bg: #ffffff;
+            --page-text: #222222;
+            --link-color: #0645ad;
+            --section-color: #0645ad;
+            --code-bg: #000000;
+            --code-text: #00FF00;
+            --code-note: #add8e6;
+            --kbd-bg: #eeeeee;
+            --kbd-text: #333333;
+            --kbd-border: #b4b4b4;
+            --border-color: #cccccc;
+            --row-hover: #f2f2f2;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-bg: #2b2b2b;
+                --page-text: #e6e6e6;
+                --link-color: #8ab4f8;
+                --section-color: #8ab4f8;
+                --code-bg: #000000;
+                --code-text: #00ff00;
+                --code-note: #87ceeb;
+                --kbd-bg: #5a5a5a;
+                --kbd-text: #f0f0f0;
+                --kbd-border: #666666;
+                --border-color: #444444;
+                --row-hover: #242424;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: var(--page-bg);
+            color: var(--page-text);
+        }
+
+        body {
+            margin: 1rem;
+            overflow-wrap: break-word;
+            line-break: loose;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            background: var(--page-bg);
+            color: var(--page-text);
+        }
+
+        a {
+            color: var(--link-color);
+            overflow-wrap: anywhere;
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--link-color);
+            outline-offset: 3px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .header {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .tab {
+            display: block;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        kbd {
+            display: inline-block;
+            padding: 2px 5px;
+            border: 1px solid var(--kbd-border);
+            border-radius: 4px;
+            background: var(--kbd-bg);
+            color: var(--kbd-text);
+            box-shadow:
+                0 1px 1px rgb(0 0 0 / 20%),
+                0 2px 0 rgb(255 255 255 / 15%) inset;
+            font-family: inherit;
+            font-size: 0.95em;
+            font-weight: 700;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
+
+        .table-wrapper {
+            max-width: 100%;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: auto;
+        }
+
+        .shortcuts {
+            margin-left: 18px;
+            white-space: nowrap;
+        }
+
+        .commands {
+            width: max-content;
+            min-width: 100%;
+            font-size: 14px;
+        }
+
+        td,
+        th {
+            padding: 4px 8px;
+            text-align: left;
+            vertical-align: top;
+            /* border-bottom: 1px solid var(--border-color); */
+            border-bottom: none;
+        }
+
+        .section-heading {
+            color: var(--section-color);
+            font-size: 16px;
+            font-weight: 700;
+            padding-top: 1rem;
+        }
+
+        .code {
+            background: var(--code-bg);
+            color: var(--code-text);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+                         Consolas, "Liberation Mono", monospace;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .code-note {
+            color: var(--code-note);
+        }
+
+        .description {
+            min-width: 280px;
+        }
+
+        tbody tr:hover td:not(.code) {
+            background: var(--row-hover);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 0.75rem;
+            }
+
+            .header {
+                font-size: 17px;
+            }
+
+            .shortcuts {
+                margin-left: 0;
+            }
+
+            .commands {
+                min-width: 850px;
+            }
+
+            .description {
+                min-width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1 class="header">
+        On a Mac, the Command Key
+        (<kbd>&#8984; Command</kbd>) is equivalent to the Windows Key
+        (<kbd>&#8862; Windows</kbd>)
+    </h1>
+
+    <p class="tab">
+        <a href="https://support.apple.com/en-us/HT201236">
+            Apple keyboard shortcuts
+        </a>
+    </p>
+
+    <section aria-label="Common keyboard shortcuts">
+        <div class="table-wrapper">
+            <table class="shortcuts">
+                <tbody>
+                    <tr>
+                        <td><kbd>&#8984;</kbd> + <kbd>O</kbd> : Open</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>N</kbd> : New</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>A</kbd> : Select All</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>&#8984;</kbd> + <kbd>C</kbd> : Copy</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>X</kbd> : Cut</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>V</kbd> : Paste</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>&#8984;</kbd> + <kbd>Z</kbd> : Undo</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>P</kbd> : Print</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>S</kbd> : Save</td>
+                    </tr>
+                    <tr>
+                        <td><kbd>&#8984;</kbd> + <kbd>B</kbd> : <strong>Bold</strong></td>
+                        <td><kbd>&#8984;</kbd> + <kbd>I</kbd> : <em>Italics</em></td>
+                        <td><kbd>&#8984;</kbd> + <kbd>U</kbd> : <u>Underline</u></td>
+                    </tr>
+                    <tr>
+                        <td><kbd>&#8984;</kbd> + <kbd>Q</kbd> : Quit</td>
+                        <td><kbd>&#8984;</kbd> + <kbd>W</kbd> : Close</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <kbd>&#8984;</kbd> + <kbd>L</kbd> :
+                            Go to location / address bar in browsers
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <kbd>&#8984;</kbd> + <kbd>K</kbd> :
+                            Connect to a network share in Finder
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <kbd>&#8984;</kbd> + <kbd>&#8679;</kbd> +
+                            <kbd>G</kbd> : Go to Folder in Finder
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="header">Commonly used Terminal.app commands</h2>
+
+        <p class="tab">
+            Search and replace (using find or perl), fdesetup,
+            discoveryutil, screen, openssl, and other terminal.app commands.
+        </p>
+
+        <p class="tab">
+            <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/screen.1.html"
+               target="_blank" rel="noopener noreferrer">
+                screen manual
+            </a>
+        </p>
+
+        <p class="tab">
+            <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/rsync.1.html"
+               target="_blank" rel="noopener noreferrer">
+                rsync manual
+            </a>
+        </p>
+    </section>
+
+    <section aria-label="Terminal command reference">
+        <div class="table-wrapper">
+            <table class="commands">
+                <!-- <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Command</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    <tr>
+                        <th class="section-heading" colspan="3" scope="colgroup">
+                            General commands
+                        </th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ chmod +x &lt;\file\location\file.name&gt;</td>
+                        <td class="description">Add execute permission to a file.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ perl -pi -w -e 's|FIND_SOMETHING|REPLACE_WITH|g;' &lt;where to search&gt;</td>
+                        <td class="description">Search and replace in files in the specified folder. This command is not recursive.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ find . -type f -iname '*.File suffix' -exec sed -i '' -e 's|FIND_SOMETHING|REPLACE_WITH|g' {} +</td>
+                        <td class="description">Recursive search and replace. Run from the top-level folder you want to search.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ sudo fdesetup status</td>
+                        <td class="description">Verify FileVault configuration.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ sudo discoveryutil mdnsflushcache</td>
+                        <td class="description">Clear the DNS cache on older macOS versions (pre-Catalina).</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ sudo killall -HUP mDNSResponder</td>
+                        <td class="description">Clear the DNS cache on Catalina and later.</td>
+                    </tr>
+
+                    <tr>
+                        <th class="section-heading" colspan="3" scope="colgroup">
+                            Screen commands
+                        </th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ ls ~/.screenrc</td>
+                        <td class="description">Find the screen settings for Terminal.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ ls /dev/tty.*</td>
+                        <td class="description">List USB and serial devices.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ screen -L /dev/tty.&lt;name from above&gt; &lt;baud_rate&gt;</td>
+                        <td class="description">Connect to a serial device. Adding -L turns on output logging.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ screen -ls</td>
+                        <td class="description">List active or detached screen sessions.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ screen -r</td>
+                        <td class="description">Reconnect to the most recent screen session, or list sessions if multiple are active.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ screen /dev/tty.&lt;name from above&gt; &lt;baud_rate&gt;</td>
+                        <td class="description">Open screen and set the baud rate.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code code-note">After connecting to screen, use these commands:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">Ctrl-A Ctrl-B</td>
+                        <td class="description">Send a break command to the window.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">Ctrl-A Ctrl-K</td>
+                        <td class="description">Kill the current screen window.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">Ctrl-A Ctrl-\</td>
+                        <td class="description">Quit screen and kill all windows.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">Ctrl-A "</td>
+                        <td class="description">Show active screen windows.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">Ctrl-A A</td>
+                        <td class="description">Rename the current window.</td>
+                    </tr>
+
+                    <tr>
+                        <th class="section-heading" colspan="3" scope="colgroup">
+                            OpenSSL commands
+                        </th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ openssl req -noout -text -in &lt;path to cert&gt;</td>
+                        <td class="description">Inspect a certificate signing request.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ openssl x509 -noout -text -in &lt;path to cert&gt;</td>
+                        <td class="description">Inspect a certificate without installing it.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code code-note">The .pem / .cer format might require an encoding option.</td>
+                        <td class="description">You can drag a certificate into Terminal to insert its path.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ openssl x509 -inform pem -noout -text -in &lt;path to cert&gt;.cer</td>
+                        <td class="description">Inspect a PEM-encoded certificate.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ openssl x509 -inform der -noout -text -in &lt;path to cert&gt;.cer</td>
+                        <td class="description">Inspect a DER-encoded certificate.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code code-note">You can also parse a CRL list to inspect serial numbers and revocation dates.</td>
+                        <td class="description">A file starting with -----BEGIN X509 CRL----- is PEM; otherwise, it may be DER.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ openssl crl -inform pem -noout -text -in &lt;path to cert&gt;.crl</td>
+                        <td class="description">Inspect a PEM-encoded certificate revocation list.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ openssl crl -inform der -noout -text -in &lt;path to cert&gt;.crl</td>
+                        <td class="description">Inspect a DER-encoded certificate revocation list.</td>
+                    </tr>
+
+                    <tr>
+                        <th class="section-heading" colspan="3" scope="colgroup">
+                            Validate file checksums and check transfer speeds
+                        </th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ shasum {-a 1 (default), 224, 256, 384, 512, 512224, 512256} &lt;FULL_FILE_LOCATION&gt;</td>
+                        <td class="description">Calculate a file's SHA checksum.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ md5 &lt;FULL_FILE_LOCATION&gt;</td>
+                        <td class="description">Calculate a file's MD5 hash.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ rsync -a --progress --stats --human-readable "source_file" "destination_location"</td>
+                        <td class="description">Display transfer progress and statistics while sending a file.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code code-note">* The remote volume must already be mounted in Finder for rsync to work.</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th class="section-heading" colspan="3" scope="colgroup">
+                            Git command references
+                        </th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user/git_Folder$ git status</td>
+                        <td class="description">Check the local repository status.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user/git_Folder$ git add &lt;file_name&gt;</td>
+                        <td class="description">Stage a file for the next commit.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user/git_Folder$ git commit -m "some text to describe commit"</td>
+                        <td class="description">Commit staged files.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user/git_Folder$ git log --oneline</td>
+                        <td class="description">View Git history and commit points.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user/git_Folder$ git reset --hard &lt;SHA1 Hash&gt;</td>
+                        <td class="description">Reset to a previous commit. This discards uncommitted changes.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user/git_Folder$ git push {-f}</td>
+                        <td class="description">Push commits to the remote repository. Force-pushing can overwrite remote history.</td>
+                    </tr>
+
+                    <tr>
+                        <th class="section-heading" colspan="3" scope="colgroup">
+                            Linux general command references
+                        </th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ getent passwd [userID]@[domain]</td>
+                        <td class="description">Check directory-service account information and Unix POSIX attributes, if supported by your system.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="code">user$ cat /etc/ssh/sshd_config</td>
+                        <td class="description">Display SSH daemon configuration and access-related settings. Restart or reload sshd after making changes when required.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>
